@@ -464,8 +464,8 @@ async def play(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} Zaid helper is not in Ur chat plz add Manually."
-                        f"\n\nZaid Assistant @{ASSISTANT_NAME} try to add manually</b>",
+                        f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} Haji helper is not in Ur chat plz add Manually."
+                        f"\n\nHaji Assistant @{ASSISTANT_NAME} try to add manually</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -512,13 +512,13 @@ async def play(_, message: Message):
                     InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
                     InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Zaid_Updates")
+                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Hajisupportt")
                 ],
             ]
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/a5e1cc2bced0c70aeb913.png"
+        thumb_name = "https://telegra.ph/file/9aa7d823d18ca1c6a66ac.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -559,7 +559,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
                     InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Zaid_Updates")
+                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Hajisupportt")
                 ],
             ]
         )
@@ -584,8 +584,8 @@ async def play(_, message: Message):
             useer=user_name
             emojilist = ["1","2","3","4","5","6"]
             while j < 6:
-                toxxt += f"{emojilist[j]} [{results[j]['title'][:30]}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ 💡 **ᴅᴜʀᴀᴛɪᴏɴ** - {results[j]['duration']}\n"
+                toxxt += f"{emojilist[j]} <b>Title - [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})</b>\n"
+                toxxt += f" ├ ⏳ **ᴅᴜʀᴀᴛɪᴏɴ** - {results[j]['duration']}\n"
                 toxxt += f" └ ⚡ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴢᴀɪᴅ__\n\n"
                 j += 1            
             keyboard = InlineKeyboardMarkup(
@@ -704,7 +704,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("ʙʜᴀɢɢ ᴊᴀᴀ ʏʜᴀ ꜱᴇ ʙꜱᴅᴋ !", show_alert=True)
         return
-    #await cb.message.edit("🔁 **processing...**")
+    await cb.message.edit("🔁 **processing...**")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
